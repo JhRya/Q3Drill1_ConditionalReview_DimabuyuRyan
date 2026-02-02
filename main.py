@@ -8,7 +8,7 @@ def calculateAverage(event):
     res = document.getElementById("result")
 
     if not all([m_val, s_val, e_val, ss_val]):
-        res.innerText = "Enter all grades."
+        res.innerText = "Please enter all grades."
         return
 
     try:
@@ -22,7 +22,7 @@ def calculateAverage(event):
             english < 1 or english > 100 or
             socialstudies < 1 or socialstudies > 100):
             
-            res.innerText = "Invalid input. Use 1-100."
+            res.innerText = "Invalid input; Please input numbers between 1-100."
         
         else:
             GenAv = (math + science + english + socialstudies) / 4
@@ -31,4 +31,5 @@ def calculateAverage(event):
             res.innerText = f"General Average: {GenAv}\n{status}"
 
     except ValueError:
+
         res.innerText = "Please enter valid numbers"
